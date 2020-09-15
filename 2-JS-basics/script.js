@@ -249,28 +249,167 @@ HINT: you will need the && operator to take the decision. If you can't solve thi
 GOOD LUCK 😀
 */
 
-var johnAvgScore = (89 + 120 + 103) / 3;
-console.log(johnAvgScore);
+// var johnAvgScore = (89 + 120 + 103) / 3;
+// console.log(johnAvgScore);
 
-var mikeAvgScore = (116 + 94 + 123) / 3;
-console.log(mikeAvgScore);
+// var mikeAvgScore = (116 + 94 + 123) / 3;
+// console.log(mikeAvgScore);
 
-var maryAvgScore = (117 + 134 + 105) / 3;
-console.log(maryAvgScore);
+// var maryAvgScore = (117 + 134 + 105) / 3;
+// console.log(maryAvgScore);
 
 
-if (johnAvgScore > mikeAvgScore && johnAvgScore > maryAvgScore) {
-    console.log('John is the winner with an average high score of ' + johnAvgScore);
+// if (johnAvgScore > mikeAvgScore && johnAvgScore > maryAvgScore) {
+//     console.log('John is the winner with an average high score of ' + johnAvgScore);
     
-} else if (mikeAvgScore > johnAvgScore && mikeAvgScore > maryAvgScore) {
-    console.log('Mike is the winner with an average high score of ' + mikeAvgScore);
-} else if (maryAvgScore > johnAvgScore && maryAvgScore > mikeAvgScore) {
-    console.log('Mary is the winner with an average high score of ' + maryAvgScore);
+// } else if (mikeAvgScore > johnAvgScore && mikeAvgScore > maryAvgScore) {
+//     console.log('Mike is the winner with an average high score of ' + mikeAvgScore);
+// } else if (maryAvgScore > johnAvgScore && maryAvgScore > mikeAvgScore) {
+//     console.log('Mary is the winner with an average high score of ' + maryAvgScore);
       
-} else {
-    console.log('ITS A DRAW!!!!!!');
+// } else {
+//     console.log('ITS A DRAW!!!!!!');
     
-}
+// }
+
+
+
+// FUNCTIONS
+
+// function calculateAge (birthyear) {
+//     return 2020 - birthyear;
+// }
+
+// var ageJohn = calculateAge(1981);
+// console.log(ageJohn);
+
+// function yearsTillRetirement(year, firstName) {
+//     var age = calculateAge(year);
+//     var retirement = 65 - age;
+
+//     if (retirement > 0) {
+//         console.log(firstName + ' retires in ' + retirement + ' years.');
+
+
+    
+// } else {
+//     console.log(firstName + ' is already retired.');
+    
+// }
+
+// yearsTillRetirement(1981, 'Aaron')
+
+
+
+// FUNCTION STATEMENTS AND EXPRESSIONS
+
+// function declaration
+// function whatDoYouDo(job, firstName) {
+
+// }
+
+// Function expression - produces an immediate result
+// var whatDoYouDo = function(job, firstName) {
+//     switch(job) {
+//         case 'teacher':
+//             return firstName + ' teaches kids how to code.';
+//         case 'driver':
+//             return firstName + ' drives a cab in Lisbon.'
+//         case 'designer':
+//             return firstName + ' designs beautiful websites.'
+//         default:
+//             return firstName + ' does something else.'
+//     }
+// }
+
+// console.log(whatDoYouDo('teacher', 'John'));
+
+// Function statements - performs actions no immediate value
+    // if/else statements, while loops
+
+
+
+// // ARRAYS
+
+// // initialize new array
+// var names = ['John', 'Mark', 'Jane']
+// var years = new Array(1990, 1969, 1948);
+
+// // mutate array data
+// console.log(names[0]);
+// console.log(names.length);
+
+// // different data types
+// var john = ['John', 'Smith', 1990, 'teacher', false];
+
+// // add element to end of array
+// john.push('blue')
+// console.log(john);
+
+// // add to beginning of array
+// john.unshift('Mr.');
+
+// // remove from end of array
+// john.pop();
+
+// // remove from beginning
+// john.shift()
+
+// // gives index position of item in array
+// // if -1  item isnt present
+// john.indexOf(1990)
+
+// var isDesigner = john.indexOf('designer') === -1 ? 'John is NOT a designer' : 'John IS a designer';
+// console.log(isDesigner);
+
+
+
+/*****************************
+* CODING CHALLENGE 3
+*/
+
+/*
+John and his family went on a holiday and went to 3 different restaurants. The bills were $124, $48 and $268.
+
+To tip the waiter a fair amount, John created a simple tip calculator (as a function). 
+He likes to tip 20% of the bill when the bill is less than $50, 
+15% when the bill is between $50 and $200,
+ and 10% if the bill is more than $200.
+
+In the end, John would like to have 2 arrays:
+1) Containing all three tips (one for each bill)
+2) Containing all three final paid amounts (bill + tip).
+
+(NOTE: To calculate 20% of a value, simply multiply it with 20/100 = 0.2)
+*/
+
+// var percentage;
+// var tip = 0;
+// var totalWithTip = 0;
+// var tipsArr = [];
+// var totalWithTipArr = [];
+
+// function tipCalc(bill) {
+//     if (bill < 50) {
+//         percentage = .2;
+//     } else if (bill >= 50 && bill <=200) {
+//         percentage = .15;
+//     } else {
+//         percentage = .1
+//     }
+//     tip = bill * percentage;
+//     tipsArr.push(tip);
+//     totalWithTip = bill + tip;
+//     totalWithTipArr.push(totalWithTip)
+//     console.log(tipsArr);
+//     console.log(totalWithTipArr);
+    
+// }
+// tipCalc(124);
+// tipCalc(48)
+// tipCalc(268)
+
+
 
 
 
