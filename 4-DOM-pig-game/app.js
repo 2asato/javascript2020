@@ -135,7 +135,12 @@ Change the game to follow these rules:
 
 
 
-var scores, roundScore, activePlayer, gamePlaying, rolled6 = false;
+var scores, 
+    roundScore, 
+    activePlayer, 
+    gamePlaying, 
+    rolled6 = false;
+    // winningScore = document.getElementById('winningScore').value;
 
 // sets settings for new game
 init();
@@ -148,34 +153,42 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
 
         // 1. random number
         var dice = Math.floor(Math.random() * 6) + 1;
-        console.log(dice);
+        console.log('dice = ' + dice);
+
+        var dice2 = Math.floor(Math.random() * 6) + 1;
+        console.log('dice2 = ' + dice2);
         
         // 2. display the random number
-            // sets selector to variable to reuse easier
+        // sets selector to variable to reuse easier
+        // dice
         var diceDOM = document.querySelector('.dice')
         diceDOM.style.display = 'block';
         // changes dice image to match random number rolled
         // changes the image src to dice-(random number).png
         diceDOM.src = 'dice-' + dice + '.png';
+        // dice2
+        var dice2DOM = document.querySelector('.dice2')
+        dice2DOM.style.display = 'block';
+        dice2DOM.src = 'dice-' + dice2 +'.png';
         // 3. Update the round score IF the rolled number was NOT a 1
-        if (dice !== 1) {
+        if (dice !== 1 && dice2 !== 1) {
             // add score
-            roundScore += dice;
+            roundScore += (dice + dice2);
             // displays round score
             document.querySelector('#current-' + activePlayer).textContent = roundScore;
-            if (dice == 6 && (rolled6)) {
-                console.log('000000000');
-                
+            if ((dice == 6 || dice2 == 6) && (rolled6)) {                
                 scores[activePlayer] = 0;
                 document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
                 nextPlayer();
-            } else if (dice == 6) {
+            } else if (dice == 6 || dice2 == 6) {
                 rolled6 = true;
             }
         } else {
             // next player
             nextPlayer();
         }
+        console.log(rolled6);
+        
     }
 });
 
@@ -190,6 +203,7 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
         if (scores[activePlayer] >= 100) {
             document.querySelector('#name-' + activePlayer).textContent = 'WINNER!!!';
             document.querySelector('.dice').style.display = 'none';
+            document.querySelector('.dice2').style.display = 'none';          
             document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
             document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
             gamePlaying = false;
@@ -212,6 +226,7 @@ function nextPlayer() {
     document.querySelector('.player-1-panel').classList.toggle('active');
     // hides dice image on player switch
     document.querySelector('.dice').style.display = 'none';
+    document.querySelector('.dice2').style.display = 'none';
 }
 
 document.querySelector('.btn-new').addEventListener('click', init);
@@ -224,6 +239,7 @@ function init() {
     rolled6 = false;
     // hide the dice in the beginning
     document.querySelector('.dice').style.display = 'none';
+    document.querySelector('.dice2').style.display = 'none';
 
     // sets all scores to 0 at beginning of game
     document.getElementById('score-0').textContent = '0';
