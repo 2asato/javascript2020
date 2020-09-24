@@ -261,7 +261,7 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
 
 function getWinningScore() {
     winningScore = document.querySelector('.winning-score').value;
-    document.querySelector('.winning-score-display').textContent = winningScore;
+    document.querySelector('.winning-score-display').textContent = 'Winning Score: ' + winningScore;
     console.log(winningScore);
     
 }

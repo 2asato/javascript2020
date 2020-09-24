@@ -2,6 +2,44 @@
 *** GENERAL
 **********************************************/
 
+.winning-score {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 520px;
+    color: #555;
+    font-size: 18px;
+    font-family: 'Lato';
+    text-align: center;
+    padding: 10px;
+    width: 170px;
+    text-transform: uppercase;
+}
+
+.submit-score {
+    position: absolute;
+    left: 50%;
+    top: 565px;
+    color: #555;
+    font-size: 18px;
+    font-family: 'Lato';
+    text-align: center;
+    padding: 10px;
+    width: 100px;
+    text-transform: uppercase;
+}
+
+.winning-score:focus {
+    outline: none;
+}
+
+.winning-score-display {
+    position: absolute;
+    left: 50%;
+    top: 90px;
+    text-align: center;
+}
+
 * {
     margin: 0;
     padding: 0;
