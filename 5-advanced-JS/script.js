@@ -360,10 +360,31 @@ c) correct answer (I would use a number for this)
 //     this.yards = yards;
 // }
 
+// function constructor
 var Question = function(questionAsked, answerChoices, correctAnswer) {
     this.questionAsked = questionAsked;
-    this.answerChoices = [];
+    this.answerChoices = answerChoices;
     this.correctAnswer = correctAnswer;
 }
+
+// var john = new Person('john', 1990, 'teacher');
+
+// questions created with constructor
+var question1 = new Question(
+    'Who is the Seahawks QB?', 
+    [
+        {
+            choice: 'Lamar Jackson',
+            choiceNum: 1
+        },
+        {
+            choice: 'Russell Wilson',
+            choiceNum: 2
+        }
+    ],
+    2
+)
+
+console.log(question1.answerChoices);
 
 
