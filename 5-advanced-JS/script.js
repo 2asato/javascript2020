@@ -371,7 +371,7 @@ var Question = function(questionAsked, answerChoices, correctAnswer) {
 
 // questions created with constructor
 var question1 = new Question(
-    'Who is the Seahawks QB?', 
+    'Who is the Seahawks starting QB?', 
     [
         {
             choice: 'Lamar Jackson',
@@ -385,6 +385,24 @@ var question1 = new Question(
     2
 )
 
-console.log(question1.answerChoices);
+var question2 = new Question(
+    'Who is the Seahawks middle LB?',
+    [
+        {
+            choice: 'Bobby Wagner',
+            choiceNum: 1
+        },
+        {
+            choice: 'Lofa Tatupu',
+            choiceNum: 2
+        }
+    ],
+    1
+)
+
+console.log(question1);
+console.log(question2);
+
+
 
 
