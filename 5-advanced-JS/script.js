@@ -334,14 +334,8 @@
 /*
 --- Let's build a fun quiz game in the console! ---
 
-1. Build a function constructor called Question to describe a question. A question should include:
-a) question itself
-b) the answers from which the player can choose the correct one (choose an adequate data structure here, array, object, etc.)
-c) correct answer (I would use a number for this)
 
-2. Create a couple of questions using the constructor
 
-3. Store them all inside an array
 
 4. Select one random question and log it on the console, together with the possible answers (each question should have a number) (Hint: write a method for the Question objects for this task).
 
@@ -353,23 +347,17 @@ c) correct answer (I would use a number for this)
 */
 
 
-
-// var Receiver = function(name, catches, yards) {
-//     this.name = name;
-//     this.catches = catches;
-//     this.yards = yards;
-// }
-
-// function constructor
+// 1. Build a function constructor called Question to describe a question. A question should include:
+// a) question itself
+// b) the answers from which the player can choose the correct one (choose an adequate data structure here, array, object, etc.)
+// c) correct answer (I would use a number for this)
 var Question = function(questionAsked, answerChoices, correctAnswer) {
     this.questionAsked = questionAsked;
     this.answerChoices = answerChoices;
     this.correctAnswer = correctAnswer;
 }
 
-// var john = new Person('john', 1990, 'teacher');
-
-// questions created with constructor
+// 2. Create a couple of questions using the constructor
 var question1 = new Question(
     'Who is the Seahawks starting QB?', 
     [
@@ -403,6 +391,18 @@ var question2 = new Question(
 console.log(question1);
 console.log(question2);
 
+// 3. Store them all inside an array
+var questionsArray = [];
+questionsArray.push(question1.questionAsked);
+questionsArray.push(question2.questionAsked);
+console.log(questionsArray);
 
+
+function showQuestion(question) {
+    console.log(question.questionAsked);
+    
+}
+
+showQuestion(question1)
 
 
