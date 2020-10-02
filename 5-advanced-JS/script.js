@@ -337,7 +337,6 @@
 
 
 
-4. Select one random question and log it on the console, together with the possible answers (each question should have a number) (Hint: write a method for the Question objects for this task).
 
 5. Use the 'prompt' function to ask the user for the correct answer. The user should input the number of the correct answer such as you displayed it on Task 4.
 
@@ -393,16 +392,19 @@ console.log(question2);
 
 // 3. Store them all inside an array
 var questionsArray = [];
-questionsArray.push(question1.questionAsked);
-questionsArray.push(question2.questionAsked);
+questionsArray.push(question1);
+questionsArray.push(question2);
 console.log(questionsArray);
 
-
+// 4. Select one random question and log it on the console, together with the possible answers (each question should have a number) 
+// (Hint: write a method for the Question objects for this task).
 function showQuestion(question) {
-    console.log(question.questionAsked);
+    var randomQuestion = questionsArray[Math.floor(Math.random() * questionsArray.length)].questionAsked;
+    console.log(randomQuestion);
+    // console.log(ra);
     
 }
 
-showQuestion(question1)
+showQuestion()
 
 
