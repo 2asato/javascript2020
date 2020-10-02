@@ -399,10 +399,12 @@ console.log(questionsArray);
 // 4. Select one random question and log it on the console, together with the possible answers (each question should have a number) 
 // (Hint: write a method for the Question objects for this task).
 function showQuestion(question) {
-    var randomQuestion = questionsArray[Math.floor(Math.random() * questionsArray.length)].questionAsked;
-    console.log(randomQuestion);
-    // console.log(ra);
-    
+    var randomQuestion = questionsArray[Math.floor(Math.random() * questionsArray.length)];
+    // random question asked
+    console.log(randomQuestion.questionAsked);
+    // answer choices to random question
+    console.log('1. ' + randomQuestion.answerChoices[0].choice);
+    console.log('2. ' + randomQuestion.answerChoices[1].choice); 
 }
 
 showQuestion()
