@@ -385,33 +385,38 @@ var question2 = new Question(
     1
 )
 
-console.log(question1);
-console.log(question2);
+// console.log(question1);
+// console.log(question2);
 
 // 3. Store them all inside an array
 var questionsArray = [];
+var randomQuestion;
+var answerPrompt;
 questionsArray.push(question1);
 questionsArray.push(question2);
-console.log(questionsArray);
+// console.log(questionsArray);
 
 // 4. Select one random question and log it on the console, together with the possible answers (each question should have a number) 
 // (Hint: write a method for the Question objects for this task).
-function showQuestion(question) {
-    var randomQuestion = questionsArray[Math.floor(Math.random() * questionsArray.length)];
+function showQuestion() {
+    randomQuestion = questionsArray[Math.floor(Math.random() * questionsArray.length)];
     // random question asked
     console.log(randomQuestion.questionAsked);
     // answer choices to random question
     console.log('1. ' + randomQuestion.answerChoices[0].choice);
     console.log('2. ' + randomQuestion.answerChoices[1].choice); 
     // 5. Use the 'prompt' function to ask the user for the correct answer. The user should input the number of the correct answer such as you displayed it on Task 4.
-    prompt(randomQuestion.questionAsked, 'Enter the number of the correct answer')
-
+    answerPrompt = prompt(randomQuestion.questionAsked, 'Enter the number of the correct answer')
+    console.log(answerPrompt);
+    
 }
 
 
 showQuestion()
 
 // 6. Check if the answer is correct and print to the console whether the answer is correct ot nor (Hint: write another method for this).
-
+// function checkAnswer() {
+//     if ()
+// }
 
 
