@@ -407,16 +407,25 @@ function showQuestion() {
     console.log('2. ' + randomQuestion.answerChoices[1].choice); 
     // 5. Use the 'prompt' function to ask the user for the correct answer. The user should input the number of the correct answer such as you displayed it on Task 4.
     answerPrompt = prompt(randomQuestion.questionAsked, 'Enter the number of the correct answer')
-    console.log(answerPrompt);
-    
+    // console.log(answerPrompt);
+    checkAnswer();
 }
 
 
 showQuestion()
 
 // 6. Check if the answer is correct and print to the console whether the answer is correct ot nor (Hint: write another method for this).
-// function checkAnswer() {
-//     if ()
-// }
+function checkAnswer() {
+    console.log(randomQuestion.correctAnswer);
+    console.log('answer prompt = ' + answerPrompt);
+    
+    if (answerPrompt == randomQuestion.correctAnswer) {
+        console.log('YOU GOT IT RIGHT!!!');
+        
+    } else {
+        console.log('WRONG!!!');
+        
+    }
+}
 
 
