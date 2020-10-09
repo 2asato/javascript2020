@@ -391,6 +391,7 @@ var question2 = new Question(
 var questionsArray = [];
 var randomQuestion;
 var answerPrompt;
+var quitPrompt;
 questionsArray.push(question1);
 questionsArray.push(question2);
 // console.log(questionsArray);
@@ -428,7 +429,6 @@ function checkAnswer() {
         console.log('WRONG!!!');
         
     }
-    // 8. After you display the result, display the next random question, so that the game never ends (Hint: write a function for this and call it right after displaying the result)
     quitGame();
 }
 
@@ -437,15 +437,19 @@ function checkAnswer() {
 // --- Expert level ---
 
 
-// 9. Be careful: after Task 8, the game literally never ends. So include the option to quit the game if the user writes 'exit' instead of the answer. In this case, DON'T call the function from task 8.
 
 // 10. Track the user's score to make the game more fun! So each time an answer is correct, add 1 point to the score (Hint: I'm going to use the power of closures for this, but you don't have to, just do this with the tools you feel more comfortable at this point).
 
 // 11. Display the score in the console. Use yet another method for this.
 
-
-function quitGame() {
-    console.log('working!');
-    
-    prompt('Do you want to keep playing?', 'y for yes, n for no');
+// 9. Be careful: after Task 8, the game literally never ends. So include the option to quit the game if the user writes 'exit' instead of the answer. In this case, DON'T call the function from task 8.
+function quitGame() {    
+    quitPrompt = prompt('Do you want to quit game?', 'y for yes, n for no');
+    if (quitPrompt == 'y') {
+        console.log('Thanks for playing!');
+        
+    } else if (quitPrompt == 'n'){
+        // 8. After you display the result, display the next random question, so that the game never ends (Hint: write a function for this and call it right after displaying the result)
+        showQuestion();
+    }
 }
